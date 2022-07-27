@@ -1,0 +1,502 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root{
+	--primary-color: hsl(330, 87%, 17%);
+	--secondary-color: hsla(203, 100%, 13%, 1);
+}
+
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*back to top arrow */
+.btn-backtotops{
+	background: var(--primary-color);
+	color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+}
+
+/*** 	START 	HEADER ***/
+header{
+	height: 100vh;
+	background: linear-gradient(
+		30deg,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.5)
+	),	url('../assets/img/banner/banner2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
+
+/** 	Start 	Navbar 		**/
+	.navbar{
+		background: linear-gradient(rgba(0, 0, 0, 0.6), var(--secondary-color));
+		padding: 20px 30px;
+		transition: all 0.7s;
+	}
+
+	.menuitems{
+	color:  #eeee;
+	font-size: 14px;
+	letter-spacing: 1px;
+	}
+
+	.menuitems:hover{
+	color: #1aaee8;
+	}
+
+	.crossxs .lines1{
+		transform: rotate(45deg) translate(6px, 6px);
+	}
+
+	.crossxs .lines2{
+		opacity: 0;
+
+	}
+
+	.crossxs .lines3{
+		transform: rotate(-45deg) translate(6px, -6px);
+	}
+
+/* 	For  Javascript */
+.navmenus{
+	background: linear-gradient(rgba(0, 0, 0, 0.8), var(--secondary-color));
+	padding: 5px 30px;
+}
+
+.navbuttons{
+	width: 50px;
+	height: 50px;
+	transition: 0.5s;
+	border: 3px solid red;
+	padding: 3px;
+}
+
+.lines1,.lines2,.lines3{
+	width: 25px;
+	height: 3px;
+	margin: 6px;
+}
+
+/** 	End 	Navbar 		**/
+
+
+/** 	Start 	Banner 	**/
+.banners{
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% ,-50%);
+}
+
+.bannerheaders{
+	animation-name: bani;
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+}
+
+.bannerparagraphs{
+	animation-name: bani;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
+	animation-fill-mode: backwards;
+}
+
+@keyframes bani{
+	0%{
+		opacity: 0;
+		transform: translateX(-10%);
+	}
+	100%{
+		opacity: 100%;
+		transform: translateX(0);
+	}
+}
+
+/** 	End 	Banners **/
+/*** 	END	  HEADER 	***/
+
+
+/*** 	START 	ABOUT 	SECTION		 ***/
+/*	! */
+#about{
+	background: linear-gradient(
+		30deg,
+		rgba(0, 0, 0, 0.3),
+		rgba(0, 0, 0, 0.3)
+	),	url('../assets/img/banner/banner2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
+
+#about img{
+	width: 350px;
+	position: absolute;
+	bottom: 0;
+}
+
+#about .lines{
+	height: 1.2px;
+	width: 30%;
+	background: white;
+}
+
+#about .lines:nth-of-type(2){
+	width: 20%;
+	height: 1px;
+	background: white;
+	margin: 3px 0;
+}
+
+#about .lines:nth-of-type(3){
+	width: 10%;
+	height: 0.7px;
+	background: white;
+	margin-bottom: 20px;
+}
+
+#about h5{
+	border-left: 3px solid red;
+	background: #fff;
+	color: #000;
+	padding: 10px;
+}
+/*** 	END 	ABOUT 	SECTION		 ***/
+/*** 	START 	PROPERTIES 	SECTION 	 ***/
+
+/* Titles */
+.titles{
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--secondary-color);
+	padding: 5px 20px;
+	position: relative;
+}
+
+.titles::before,.titles::after{
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
+
+.titles::before{
+	left: 0;
+	bottom: 0;
+	border-left: 3px solid var(--secondary-color);
+	border-bottom: 3px solid var(--secondary-color);
+}
+
+.titles::after{
+	right: 0;
+	top: 0;
+	border-right: 3px solid var(--secondary-color);
+	border-top: 3px solid var(--secondary-color);
+}
+
+.propertylists{
+	color: #777;
+	cursor: pointer;
+}
+
+.activeitems{
+	color: var(--primary-color);
+	font-weight: bold;
+}
+/*** 	END		PROPERTIES 	SECTION 	 ***/
+
+
+/*** START 	ADVERTISE 	SECTION ***/
+.missions{
+	background: var(--secondary-color);
+}
+
+.fromlefts{
+	animation-name: leftani;
+	animation-duration: 3s;
+}
+
+@keyframes leftani{
+	from{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}}
+
+.fromrights{
+	animation-name: rightani;
+	animation-duration: 3s;
+}
+
+@keyframes rightani{
+	from{
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/*** END 	ADVERTISE 	SECTION ***/
+
+
+/*** START 	SERVICES 	SECTION ***/
+#services{
+	background: linear-gradient(200deg,var(--primary-color),var(--secondary-color));
+}
+
+.servicecards{
+	overflow: hidden;
+	position: relative;
+	white-space: pre-wrap;
+}
+
+.servicecards::before{
+	content: "You may need our services ? \A Try and upgrade your living environment. \A \f004  \f004  \f004";
+	width: 100%;
+	height: 100%;
+	font-family: "Font Awesome 5 Free";
+	color: white;
+	text-align: center;
+	line-height: 2;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.servicecards:hover::before{
+	content: "";
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.servicecards img{
+	transition: transform .5s;
+}
+
+.servicecards:hover img{
+	transform: scale(1.1);
+}
+
+.servicetexts{
+	width: 40%;
+	background: rgba(0, 0, 0, 0.7);
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	opacity: 0.7;
+
+	position: absolute;
+	right: 0;
+	top: 80%;
+}
+/*** END 	SERVICES 	SECTION ***/
+
+
+
+/*** START 	CLIENTS 	SECTION***/
+ul.clientlists{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+ul.clientlists li{
+	background: #f4f4f4;
+	border: 5px solid #e9e9e9;
+	padding: 20px 30px;
+	margin: auto;
+}
+
+ul.clientlists img{
+	width: 100px;
+}
+
+ul.clientlists li:hover{
+	border-color: var(--secondary-color);
+	box-shadow: 3px -5px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width:  768px){
+	ul.clientlists li{
+		background: #f4f4f4;
+		border: 2px solid #e9e9e9;
+		padding: 10px 20px;
+		margin: 0 5px;
+	}
+
+	ul.clientlists img{
+		width: 70px;
+	}
+	ul.clientlists li:hover{
+		border-color: var(--secondary-color);
+		box-shadow: 2px -3px 0 rgba(0, 0, 0, 0.3);
+	}
+}
+/*** END 	CLIENTS 	SECTION***/
+
+
+/*** START 	CUSTOMERS 	SECTION***/
+.customers{
+	background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1.0)),url('../assets/img/banner/banner3.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/*** END 	CUSTOMERS 	SECTION***/
+
+
+/*** START 	REQUEST 	SECTION***/
+.quotes{
+	background: var(--secondary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: centers;
+	margin: -30px;
+	padding: 30px 50px;
+}
+
+.quotes .btn-calls{
+	width: 170px;
+	height: 50px;
+	background: var(--primary-color);
+	color: #fff;
+	font-size: 15px;
+	line-height: 50px;
+	border: none;
+	border-radius: 100px;
+	padding: 0;
+	transform: translateY(-1px);
+	transition: all 0.3s;
+}
+
+.quotes .btn-calls:hover{
+	box-shadow: -3px 3px 3px #444;
+	transform: translateY(0);
+}
+
+.infos{
+	display: flex;
+	justify-content: space-between;
+}
+
+.phoneicon{
+	width: 30px;
+}
+
+@media (max-width: 700px){
+	.phoneicon{
+		width: 40px;
+	}
+}
+/*** END 	REQUEST 	SECTION***/
+
+
+/*** START 	FUNITURE SECTION***/
+.furicon img{
+	width: 70px;
+}
+
+.furicon:nth-child(even){
+	background: #f1f1f1;
+}
+
+.furicon div:nth-child(odd){
+	background: #ffffff;
+}
+/*** END 	FUNITURE SECTION***/
+
+
+/*** START 	CONTACT 	SECTION ***/
+.contacts{
+	background-image: linear-gradient(100deg,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8) 50%,transparent 50%, transparent),url('../assets/img/banner/banner3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.contacts .inputs{
+	background: transparent;
+	border-color: transparent;
+	border-bottom: 2px solid #ccc;
+	border-radius: 0;
+	color: #fff;
+	transition: all 0.8s;
+}
+
+.contacts .inputs:focus{
+	box-shadow: none;
+	border-bottom: 2px solid var(--primary-color);
+}
+
+.contacts .submit-btns{
+	background: var(--primary-color);
+	color: #fff;
+	border: none;
+}
+
+.contacts .submit-btns:hover{
+	background: var(--secondary-color);
+	color: #fff;
+}
+
+.labels{
+	color: #e2e2e2;
+	display: block;
+	margin-top: -60px;
+	margin-left: 10px;
+	transition: all .5s;
+}
+
+.inputs:placeholder-shown + .labels{
+	transform: translateY(30px);
+	opacity: 0;
+}
+/*** END 	CONTACT 	SECTION ***/
+
+
+/*START FOOTER*/
+.footers{
+	background: var(--primary-color);
+}
+
+.footerlinks{
+	color: #e2e2e2;
+	text-decoration: none;
+	font-size: 13px;
+	text-transform: up
+	percase;
+}
+.footerlinks:hover{
+	color: orange;
+	border-bottom: 1px solid orange;
+}
+
+/* ALL DONE */
